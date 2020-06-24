@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import MMDLogo from './../images/mmd-logo.png'
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome'
+import { faGrinAlt } from '@fortawesome/free-solid-svg-icons'
 
 import './Loader.css'
 
@@ -13,6 +15,7 @@ const Loader = () =>{
     return(
         <div className='logo-container'>
             <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
+            <FontAwesomeIcon icon={ faGrinAlt } />
         </div>
     )
 }
