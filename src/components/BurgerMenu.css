@@ -1,0 +1,34 @@
+.bm-burger-button {
+  position: fixed;
+  width: 36px;
+  height: 30px;
+  left: 36px;
+  top: 36px;
+}
+ 
+.bm-burger-bars {
+  background: #373a47;
+}
+
+.bm-burger-bars-hover {
+  background: grey;
+}
+
+.bm-cross-button {
+  height: 35px;
+  width: 35px;
+}
+ 
+.bm-cross {
+  background: black;
+}
+
+.bm-menu {
+  background: #28B4C0;
+  padding: 2.5em 1.5em 0;
+  font-size: 1.15em;
+}
+
+.bm-overlay {
+  background: green;
+}
