@@ -1,3 +1,7 @@
+.Home{
+    background-color: #E0FBFC;
+}
+
 .ButtonHomeContainer{
     display: flex;
     flex-direction: column;
