@@ -11,7 +11,6 @@ import MyTreatment from './components/MyTreatment'
 
 
 import './App.css';
-import Loader from './components/Loader';
 
 const App = () => {
   return (
