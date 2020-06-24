@@ -1,13 +1,20 @@
-import React from 'react'
-import MMDLogo from './../images/mmd-logo.svg'
+import React, { useEffect, useState } from 'react'
+import MMDLogo from './../images/mmd-logo.png'
 
+import './Loader.css'
 
-const Logo = () =>{
+const Loader = () =>{
+    const [load, setLoad] = useState(false)
+    useEffect(() => {
+      setTimeout(() => {
+        setLoad(true)
+      }, 3000)
+    }, [])
     return(
-        <div>
-            <img src={MMDLogo} alt='Logo My Med Daily' />
+        <div className='logo-container'>
+            <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
         </div>
     )
 }
 
-export default Logo
+export default Loader
