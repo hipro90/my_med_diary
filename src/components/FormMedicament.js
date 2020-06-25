@@ -20,10 +20,10 @@ const Modal = ({showModal,closeModal}) =>{
                         <div className="modal__description">                 
                             <form className="form">
                                 <label className='nom-med'>Name's medicine</label>
-                                <input className='text-info' />
+                                <input className='text-info' name='name' />
 
                                 <label className='nom-med'>Quantity</label>
-                                <input className='text-info' />
+                                <input className='text-info' name='quantity' />
 
                                 <div className='container-checks'>
                                 <input className='text-casse' type='checkbox' />
