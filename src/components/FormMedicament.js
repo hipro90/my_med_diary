@@ -15,31 +15,35 @@ const Modal = ({showModal,closeModal}) =>{
                         <FontAwesomeIcon icon={faTimes} className="modal__close" onClick={closeModal} /> 
                     </span>
                     <div className="modal__header">
-                    <h3>Ajouter un medicament&nbsp;!</h3>            
+                    <h3>To add a medicine</h3>            
                     </div>
                         <div className="modal__description">                 
                             <form className="form">
-                                <label className='nom-med'>Nom du médicament</label>
+                                <label className='nom-med'>Name's medicine</label>
                                 <input className='text-info' />
 
-                                <label className='nom-med'>Quantité prise</label>
+                                <label className='nom-med'>Quantity</label>
                                 <input className='text-info' />
+
                                 <div className='container-checks'>
                                 <input className='text-casse' type='checkbox' />
-                                <label className='nom-med'>Matin</label>
+                                <label className='nom-med'>Already existant</label>
                                 </div>
                                 <div className='container-checks'>
                                 <input className='text-casse' type='checkbox' />
-                                <label className='nom-med'>Midi</label>
+                                <label className='nom-med'>Morning</label>
                                 </div>
                                 <div className='container-checks'>
                                 <input className='text-casse' type='checkbox' />
-                                <label className='nom-med'>Soir</label>
+                                <label className='nom-med'>Midday</label>
+                                </div>
+                                <div className='container-checks'>
+                                <input className='text-casse' type='checkbox' />
+                                <label className='nom-med'>Aftenoon</label>
                                 
-                                <button className="button" value="send">Enregistrer</button> 
+                                <button className="button" value="send">Registrer</button> 
                                 </div>                        
                             </form>
-                        <p className="text"></p>
                         </div>
                      </div>
                 </div>           

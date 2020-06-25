@@ -1,0 +1,49 @@
+.container-more{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+
+.iconMore{
+    font-size: 3em;
+    color: #F28737;
+    position: absolute;
+    right: 10vw;
+    bottom: 5%;
+}
+.form {
+    width: 90%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.formMore .nom-med{
+    padding-top: 20px;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.formMore .container-checks{
+    display: block;
+    position: relative;
+    margin-left: 15%;
+    margin-top: 10%;
+}
+
+.formMore .container-checks .nom-med{
+    margin-left: 25px;
+}
+
+.formMore .text-info{
+    padding: 10px;
+}
+
+.formMore .container-checks .erase-med{
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    top: 5px;
+}
