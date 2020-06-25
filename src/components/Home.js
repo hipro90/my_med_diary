@@ -9,7 +9,6 @@ import './Home.css'
 const Home = () => {
     return (
         <div className="Home">
-<<<<<<< HEAD
            <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
             <FontAwesomeIcon icon={faSmile} className='icon-home' />
            <h1 className='tips'>Tips of the day</h1> 
@@ -18,7 +17,6 @@ const Home = () => {
            <button className="homeButton"><Link to='/myTreatment' className="homeLink">My treatment</Link></button>
            <button className="homeButton"><Link to='/myDiary' className="homeLink">My diary</Link></button>
            </div>
-=======
             <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
             <FontAwesomeIcon icon={faSmile} className='icon' />
             <p className='tips'>Tips of the day</p> 
@@ -27,7 +25,6 @@ const Home = () => {
                 <button className="homeButton"><Link to='/myTreatment' className="homeLink">My treatment</Link></button>
                 <button className="homeButton"><Link to='/myDiary' className="homeLink">My diary</Link></button>
             </div>
->>>>>>> firebase
         </div>
     )
 }
