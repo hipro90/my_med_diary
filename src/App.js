@@ -18,11 +18,11 @@ const App = () => {
       <BurgerMenu/>
       <Switch>
         <Route exact path = '/' component = {Home} />
-        <Route path = '/loader' component = {Loader} />
-        <Route path = '/diary' component = {MyDiary} />
-        <Route path = '/history' component = {MyHistory} />
-        <Route path = '/pillbox' component = {MyPillbox} />
-        <Route path = '/treatment' component = {MyTreatment} />
+        <Route path = '/myLoader' component = {Loader} />
+        <Route path = '/myDiary' component = {MyDiary} />
+        <Route path = '/myHistory' component = {MyHistory} />
+        <Route path = '/myPillbox' component = {MyPillbox} />
+        <Route path = '/myTreatment' component = {MyTreatment} />
       </Switch>
     </div>
   );
