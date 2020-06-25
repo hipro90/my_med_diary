@@ -12,6 +12,11 @@
     "react": "^16.13.1",
     "react-burger-menu": "^2.6.17",
     "react-dom": "^16.13.1",
+<<<<<<< HEAD
+=======
+    "react-icons": "^3.10.0",
+    "react-native-svg": "^12.1.0",
+>>>>>>> 62e0fadfee8c409fe5ad4f874fb6a4bd9575d721
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1"
   },

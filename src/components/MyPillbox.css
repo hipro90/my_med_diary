@@ -1,0 +1,21 @@
+.pillbox{
+  width: 100%;
+}
+.pillboxH2{
+    text-align: center;
+    margin : 20px auto;
+}
+.medListContainer{
+    margin: auto;
+    
+    display : flex;
+    justify-content: center;
+}
+
+.medList {
+  color: red;
+}
+
+.green{
+    color : green;
+}
