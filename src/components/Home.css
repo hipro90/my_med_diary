@@ -1,0 +1,30 @@
+.Home{
+    background-color: #E0FBFC;
+    text-align: center;
+}
+
+.mmd-logo, .icon{
+    margin: 100px auto 50px auto;
+}
+
+.ButtonHomeContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.homeButton{
+    width: 200px;
+    height : 50px;
+    margin : 10px auto;
+    background-color: #28B4C0;
+}
+
+.homeLink{
+    text-decoration: none;
+    color: white;
+}
+
+.tips{
+    margin-bottom: 30px;
+}
