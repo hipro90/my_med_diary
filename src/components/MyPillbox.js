@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Write from '../Firebase/Write'
+import { Link } from 'react-router-dom'
 
 import './MyPillbox.css'
 
@@ -85,7 +86,7 @@ const MyPillbox = (props) => {
                     ))}
                 </div>
             </div>
-            <button onClick={()=> sendData()} >VALIDATE</button>
+            <button onClick={()=> sendData()} ><Link to='/Home'>VALIDATE</Link></button>
         </div>
     )
 }

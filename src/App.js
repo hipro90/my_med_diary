@@ -51,7 +51,7 @@ const App = () => {
           <MyHistory historic={historic} />
         </Route>
         <Route path = '/myPillbox'>
-          <MyPillbox medicine={medicine} />
+          <MyPillbox medicine={medicine} historic={historic}/>
         </Route>
         <Route path = '/myTreatment'>
           <MyTreatment medicine={medicine} />
