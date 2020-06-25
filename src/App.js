@@ -36,7 +36,7 @@ const App = () => {
       .catch(error => {
           console.log("Error writing document:", error)
       })
-  },[])
+  },[db])
 
   return (
     <div className="App">
