@@ -38,15 +38,83 @@ const MyPillbox = (props) => {
         getCurrentMedList() 
     }, [dataMedicine])
 
-    if (dataHistoric[0] !== undefined){
-        dataHistoric.map((index) => {
-            for(const i in index) {
-                console.log(Date(index[i].takenDate.second))
-            }
+    useEffect(()=>{
+        getHistory()
+    }, [props.historic] )
+
+    // if (dataHistoric[0] !== undefined){
+    //     dataHistoric.map((index) => {
+    //         for(const i in index) {
+    //             console.log(new Date(index[i].takenDate.seconds * 1000))
+    //             console.log(index[i])
+    //         }
+    //     }
+    //     )
+    //     //console.log(dataHistoric[0][0])
+    // }
+
+    const getHistory =() =>{
+        const dataHistoric = props.historic
+        const today = new Date()
+        const todayTimeStamp = Date.parse(today)/1000
+
+        if (today.getHours() < 11){
+            dataHistoric.map((index) => {
+                for(const i in index) {
+                    const date = new Date(index[i].takenDate.seconds * 1000)
+                    const dateTimeStamp = index[i].takenDate.seconds 
+                    
+                    if ( date.getHours() < 11 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
+                        console.log('1 medicament pris ce matin')
+                        console.log(index[i].nom)
+                    }
+                }
+            })
+        } else if (today.getHours() >= 11 && today.getHours() < 17){
+            dataHistoric.map((index) => {
+                for(const i in index) {
+                    const date = new Date(index[i].takenDate.seconds * 1000)
+                    const dateTimeStamp = index[i].takenDate.seconds 
+                    
+                    if ( date.getHours() >= 11 && date.getHours() < 17 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
+                        console.log('1 medicament pris ce midi')
+                        console.log(index[i].nom)
+                    }
+                }
+            })
+        } else {
+            dataHistoric.map((index) => {
+                for(const i in index) {
+                    const date = new Date(index[i].takenDate.seconds * 1000)
+                    const dateTimeStamp = index[i].takenDate.seconds 
+                    //const todayTimeStamp = Date.parse(today)/1000
+                    //console.log(date)
+                    //console.log(date.getHours())
+                    //console.log(dateTimeStamp)
+                    //console.log(todayTimeStamp)
+                    if (date.getHours() > 17 && date.getHours() < 23 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
+                        console.log('1 medicament pris ce soir')
+                        console.log(index[i].nom)
+                    }
+                    //console.log('test')
+                    //&& (todayTimeStamp-dateTimeStamp) < 86400000
+                    //console.log( (Date.parse('02 Jan 1970 00:00:00 GMT'))- (Date.parse('01 Jan 1970 00:00:00 GMT')) )
+                    //console.log(new Date(86400000))
+                }
+            })
         }
-        )
-        //console.log(dataHistoric[0][0])
-    }
+        }
+     
+
+    //récupérer les datas de l'historique 
+    // regarder dans quelle tranche horaire on est matin, midi ou soir
+    // regarder si pour cette tranche horaire des datas existent
+    // si des datas existent : afficher medicaments déjà pris
+      // afficher quels médicaments ont été pris
+      // Vérouiller le bouton valider
+    // si les datas n'existent pas : afficher les medicaments à prendre
+        // laisser le bouton validé en marche
+
     
     // const dejaPris = dataHistoric.map(index => {
     //     index.map(i => console.log(i))
