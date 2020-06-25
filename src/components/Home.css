@@ -3,8 +3,17 @@
     text-align: center;
 }
 
-.mmd-logo, .icon{
-    margin: 100px auto 50px auto;
+.Home h1{
+    margin-top: 5vh;
+}
+.mmd-logo{
+    margin: 100px auto 0px auto;
+}
+
+.Home .icon-home{
+    margin-left: -12px;
+    margin-bottom: 5px;
+    color: #F28737;
 }
 
 .ButtonHomeContainer{

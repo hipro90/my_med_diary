@@ -18,8 +18,8 @@ const Loader = () =>{
     return load ? <Redirect to='/Home' /> :(
         <div className='logo-container'>
             <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
-            <FontAwesomeIcon icon={faSmile} className='icon' />
-         </div>
+            <FontAwesomeIcon icon={faSmile} className='icon-loader' />
+        </div>
     )
 }
 
