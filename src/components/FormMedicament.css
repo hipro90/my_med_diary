@@ -1,0 +1,125 @@
+.modal-holder {
+    width: 95%;
+    margin: auto;
+    padding: 0;
+}
+.modal-holder .modal {
+    position: fixed;
+    left: 5vw;
+    z-index: 2;
+}
+.modal {
+    width: 90vw;
+    margin: auto;
+    color:#fff;
+    text-align: center;
+    letter-spacing: 0.0625rem;
+    margin-top: -18vh;
+    font-weight: 300;
+    background: #28B4C0;
+    border-radius: 0.4375rem;
+    padding-bottom: 10%;
+}
+.modal h4,h6{
+    color: rgba(242,135,55);
+}
+.modal__close {
+    position: absolute;
+    top: .3rem;
+    right: .5rem;
+    display: inline-block;
+    font-size: 1.2em;
+    color:#F28737;
+    background-color: #fff;
+    border-radius: 80px;
+    padding: 0px 2px;
+}
+.modal__close:hover {
+    opacity: 0.75;
+    cursor: pointer;
+}
+.modal__header h3{
+    font-size: 1.3rem;
+    margin: 30px 0px 0px 0px;
+    text-align: center;
+    line-height: 32px;
+}
+.modal__description {
+    font-size: 1em;
+    color: #fff;
+    width: 100%;
+    text-align: left;
+}
+
+.modal__description h3{
+    text-transform: uppercase;
+    font-size: 1.5em;
+}
+
+.modal__description .form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    margin-left: 5%;
+    margin-bottom: 15%;
+    align-items: flex-start;
+}
+
+.modal__description .form button{
+    text-align: left;
+    background-color: #F28737;
+    border-radius: 8px;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    margin-left: 45%;
+    margin-top: 8%;
+}
+
+.modal__description .form .nom-med{
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.modal__description .container-checks{
+    display: block;
+    position: relative;
+    padding-left: 5px;
+    margin-bottom: 12px;
+    margin-top: 15px;
+}
+
+.modal__description .form .container-checks .nom-med{
+    margin-left: 25px;
+}
+
+.modal__description .form .text-info{
+    padding: 10px;
+}
+
+.modal__description .container-checks .text-casse{
+    position: absolute;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+    top: 5px;
+}
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background: rgba(40,180,192,0.45);
+    z-index: 1;
+}
+
+
+
+
+
+     

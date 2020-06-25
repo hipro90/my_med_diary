@@ -38,11 +38,11 @@ const App = () => {
       .catch(error => {
           console.log("Error writing document:", error)
       })
-  },[])
+  },[db])
 
   return (
     <div className="App">      
-      {/* <BurgerMenu/> */}
+      <BurgerMenu/>
       <Switch>
         <Route exact path = '/' component = {Loader} />
         <Route path = '/Home' component = {Home} />
