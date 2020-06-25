@@ -3,6 +3,10 @@
     text-align: center;
 }
 
+.mmd-logo, .icon{
+    margin: 100px auto 50px auto;
+}
+
 .ButtonHomeContainer{
     display: flex;
     flex-direction: column;
@@ -19,4 +23,8 @@
 .homeLink{
     text-decoration: none;
     color: white;
+}
+
+.tips{
+    margin-bottom: 30px;
 }
