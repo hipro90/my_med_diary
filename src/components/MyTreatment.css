@@ -7,7 +7,7 @@
 .iconMore{
     font-size: 3em;
     color: #F28737;
-    position: absolute;
+    position: absolute!important;
     right: 10vw;
     bottom: 5%;
 }

@@ -15,7 +15,7 @@ const Loader = () =>{
     return(
         <div className='logo-container'>
             <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
-            <FontAwesomeIcon icon={faSmile} className='icon' />
+            <FontAwesomeIcon icon={faSmile} className='icon-loader' />
         </div>
     )
 }

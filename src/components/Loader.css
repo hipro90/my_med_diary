@@ -6,3 +6,8 @@
     width: 150px;
     height: auto;
 }
+.icon-loader{
+    color: #F28737;
+    margin-left: -12px;
+    margin-bottom: 5px;
+}
