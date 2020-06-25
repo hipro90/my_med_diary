@@ -15,7 +15,9 @@ const Loader = () =>{
       }, 2000)
     }, [])
 
-    return load ? <Redirect to='/Home' /> :(
+    return load 
+    ? <Redirect to='/Home' /> 
+    : (
         <div className='logo-container'>
             <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
             <FontAwesomeIcon icon={faSmile} className='icon-loader' />
