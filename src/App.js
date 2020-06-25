@@ -4,8 +4,6 @@ import './Firebase/Config'
 import 'firebase/firestore'
 import * as firebase from 'firebase'
 
-import Delete from './Firebase/Delete'
-import BurgerMenu from './components/BurgerMenu'
 import Home from './components/Home'
 import Loader from './components/Loader'
 import MyDiary from './components/MyDiary'
@@ -41,8 +39,7 @@ const App = () => {
   },[])
 
   return (
-    <div className="App">      
-      {/* <BurgerMenu/> */}
+    <div className="App">
       <Switch>
         <Route exact path = '/' component = {Loader} />
         <Route path = '/Home' component = {Home} />

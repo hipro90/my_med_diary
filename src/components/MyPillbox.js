@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Write from '../Firebase/Write'
 import { Link } from 'react-router-dom'
 
+import BurgerMenu from './BurgerMenu'
+
 import './MyPillbox.css'
 
 // const medicaments = [
@@ -99,7 +101,7 @@ const MyPillbox = (props) => {
 
     return (
         <div className="pillbox">
-        
+            <BurgerMenu/>
             <h2 className="pillboxH2">My Pillbox</h2>
             <p className="pillboxP">{message}</p>
             <div className="medListContainer">
