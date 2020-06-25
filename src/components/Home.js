@@ -4,11 +4,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSmile } from '@fortawesome/free-solid-svg-icons'
 import MMDLogo from './../images/mmd-logo.png'
 
+import BurgerMenu from './BurgerMenu'
+
 import './Home.css'
 
 const Home = () => {
     return (
         <div className="Home">
+            <BurgerMenu/>
            <img src={MMDLogo} alt='Logo My Med Daily' className='mmd-logo' />
             <FontAwesomeIcon icon={faSmile} className='icon-home' />
            <h1 className='tips'>Tips of the day</h1> 

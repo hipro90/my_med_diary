@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom'
 
-import BurgerMenu from './components/BurgerMenu'
 import Home from './components/Home'
 import Loader from './components/Loader'
 import MyDiary from './components/MyDiary'
@@ -15,7 +14,6 @@ import './App.css';
 const App = () => {
   return (
     <div className="App">
-      <BurgerMenu/>
       <Switch>
         <Route exact path = '/' component = {Loader} />
         <Route path = '/Home' component = {Home} />

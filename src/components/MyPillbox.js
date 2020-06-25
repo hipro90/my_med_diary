@@ -1,5 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
+import BurgerMenu from './BurgerMenu'
+
 import './MyPillbox.css'
 
 const medicaments = [
@@ -79,6 +81,7 @@ const MyPillbox = () => {
 
     return (
         <div className="pillbox">
+            <BurgerMenu/>
             <h2 className="pillboxH2">My Pillbox</h2>
             {allMedsTaken ? (<p className="pillboxP">You have already taken your medicines !!!</p>):(
                 <div>

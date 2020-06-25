@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlusCircle } from '@fortawesome/free-solid-svg-icons'
 import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
+import BurgerMenu from './BurgerMenu'
+
 import './MyTreatment.css'
 
 const MyTreatment = () => {
@@ -16,6 +18,7 @@ const MyTreatment = () => {
     }
     return (
         <>
+        <BurgerMenu/>
         <h1>My Treatment</h1>
         <div onClick={() =>showModal()} className='container-more'>
         <form className="formMore">
