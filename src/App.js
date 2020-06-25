@@ -17,8 +17,8 @@ const App = () => {
     <div className="App">
       <BurgerMenu/>
       <Switch>
-        <Route exact path = '/' component = {Home} />
-        <Route path = '/myLoader' component = {Loader} />
+        <Route exact path = '/' component = {Loader} />
+        <Route path = '/Home' component = {Home} />
         <Route path = '/myDiary' component = {MyDiary} />
         <Route path = '/myHistory' component = {MyHistory} />
         <Route path = '/myPillbox' component = {MyPillbox} />
