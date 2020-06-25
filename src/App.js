@@ -41,9 +41,7 @@ const App = () => {
   },[])
 
   return (
-    <div className="App">
-      <h1>Test Firebase</h1>
-      
+    <div className="App">      
       {/* <BurgerMenu/> */}
       <Switch>
         <Route exact path = '/' component = {Loader} />
@@ -51,7 +49,9 @@ const App = () => {
         <Route path = '/myDiary' component = {MyDiary} />
         <Route path = '/myHistory' component = {MyHistory} />
         <Route path = '/myPillbox' component = {MyPillbox} />
-        <Route path = '/myTreatment' component = {MyTreatment} />
+        <Route path = '/myTreatment'>
+          <MyTreatment medicament={medicament} />
+        </Route>
       </Switch>
     </div>
   );
