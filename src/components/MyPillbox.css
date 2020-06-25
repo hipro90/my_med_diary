@@ -1,12 +1,15 @@
 .pillbox{
-
+  width: 100%;
 }
 .pillboxH2{
     text-align: center;
+    margin : 20px auto;
 }
 .medListContainer{
     margin: auto;
-    width: 15%;
+    
+    display : flex;
+    justify-content: center;
 }
 
 .medList {
