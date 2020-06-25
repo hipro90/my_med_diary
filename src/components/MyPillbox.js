@@ -20,13 +20,35 @@ const MyPillbox = (props) => {
     const [message, setMessage] = useState(null)
     const [allMedsTaken, setAllMedsTaken] = useState({})
     const [dataMedicine, setDataMedicine] = useState([])
+    const [dataHistoric, setDataHistoric] = useState([])
+    const [checkedSomething, setCheckedSomething] = useState(false)
     const collection = 'historic'
 
     useEffect(() => {
         setDataMedicine(props.medicine)
     },[props.medicine])
 
-    useEffect(() => { getCurrentMedList() }, [dataMedicine])
+    useEffect(() => {
+        setDataHistoric(props.historic)
+    },[props.historic])
+
+    useEffect(() => { 
+        getCurrentMedList() 
+    }, [dataMedicine])
+
+    if (dataHistoric[0] !== undefined){
+        dataHistoric.map((index) => {
+            for(const i in index) {
+                console.log(Date(index[i].takenDate.second))
+            }
+        }
+        )
+        //console.log(dataHistoric[0][0])
+    }
+    
+    // const dejaPris = dataHistoric.map(index => {
+    //     index.map(i => console.log(i))
+    // })
 
     const getCurrentMedList = () => {
         const today = new Date()
@@ -59,21 +81,25 @@ const MyPillbox = (props) => {
         takenMeds[index].taken = !takenMeds[index].taken
         takenMeds[index].takenDate = new Date()
         setAllMedsTaken(takenMeds)
+        setCheckedSomething(true)
     }
     
     const sendData = () => {
-        if (allMedsTaken) {
+        if (checkedSomething === true) {
             Write(collection, {...allMedsTaken})
+            console.log('allMedsTaken',allMedsTaken)
         } else {
             for ( let i=0 ; i < medList.length ;i++ ){
                 medList[i].takenDate = new Date()
             }
+            console.log('medList',medList)
             Write(collection, {...medList})
         }
     }
 
     return (
         <div className="pillbox">
+        
             <h2 className="pillboxH2">My Pillbox</h2>
             <p className="pillboxP">{message}</p>
             <div className="medListContainer">
@@ -92,3 +118,5 @@ const MyPillbox = (props) => {
 }
 
 export default MyPillbox
+
+//{console.log(dataHistoric)}
