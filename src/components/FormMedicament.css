@@ -103,8 +103,6 @@
 .modal__description .container-checks .text-casse{
     position: absolute;
     cursor: pointer;
-    height: 0;
-    width: 0;
     top: 5px;
 }
 .modal-overlay {
