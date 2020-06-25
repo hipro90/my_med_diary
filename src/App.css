@@ -26,8 +26,11 @@ h1{
 }
 
 a {
-  color: #F28737;
+  color: #fff;
   text-decoration: none;
+  font-weight: 600; 
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
 }
 
 .icon{
