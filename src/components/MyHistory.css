@@ -5,14 +5,26 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    font-size: .8em;
 }
 
+.container-tab .banniere {
+    width: 100%;
+    text-align: center;
+    background-color: #30d3e2b9;
+    height: 87px;
+}
+
+/* .container-tab .banniere  h1{
+    margin-top: 3vh;
+}
+ */
 .table-meds{
+    font-size: .8em;
     margin-top: 10vh;
     width: 90%;
     background-color: rgba(255, 255, 255, .5);
     color:#5C6B73;
+    box-shadow: 0px 0px 7px rgba(92, 107, 115, .4);
 }
 
 .table-meds thead{
@@ -22,7 +34,7 @@
 
 .table-meds body{
     width: 90%;
-    height: 50%
+    height: 50%;
 }
 
 
@@ -31,13 +43,16 @@
 }
 
 .table-meds, th, td{
-    border: .5px solid #5C6B73;
+    border: .5px solid rgba(92, 107, 115, .3);
     border-collapse: collapse;
 }
 
+.table-meds tr td:nth-child(1){
+    text-align: left;
+    padding-left: 15px;
+}
 .table-meds th{
-    height: 40px;
-    
+    height: 40px;   
 }
 
 .table-meds-mois{
@@ -53,6 +68,7 @@
     color: #fff;
     text-align: center;
     align-items: flex-end;
+    font-size: .8em;
 }
 .container-notice .done{
     background-color: #21B534;

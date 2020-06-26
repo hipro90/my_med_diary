@@ -26,23 +26,25 @@ const MyTreatment = (props) => {
     },[props.dataTreatment])
     
     return (
-        <>
-        <div className='banniere'>
+        <div className='container-more'>
             <BurgerMenu/>
-            <h1 className='myTreatment'>My Treatment</h1>
+            <div className='banniere'>
+                <h1 className='myTreatment'>My Treatment</h1>
+            </div>
+            <div onClick={() =>showModal()}>
+                <ul>{data.map((doc,key) => 
+                    <div className='li'>
+                        <li key={key}>{doc[0].nom}</li>
+                        <FontAwesomeIcon icon={faTimesCircle} className='icon-delete' onClick={()=>Delete(doc[1],props.callDataBase)} />
+                    </div>
+                
+                    )}
+                </ul>
+                <FontAwesomeIcon icon={faPlusCircle} className='iconMore' />
+            </div>
+            <div><Modal callDataBase={props.callDataBase} showModal={openModal} closeModal={closeModal} /></div>
         </div>
-        <div onClick={() =>showModal()} className='container-more'>
-            <ul>{data.map((doc,key) => 
-                <div className='li'>
-                    <li key={key}>{doc[0].nom}</li>
-                    <FontAwesomeIcon icon={faTimesCircle} className='icon-delete' onClick={()=>Delete(doc[1],props.callDataBase)} />
-                </div>
-                )}
-            </ul>
-            <FontAwesomeIcon icon={faPlusCircle} className='iconMore' />
-        </div>
-        <div><Modal callDataBase={props.callDataBase} showModal={openModal} closeModal={closeModal} /></div>
-        </>
+    
     )
 }
 
