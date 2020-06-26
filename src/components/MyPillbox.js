@@ -67,9 +67,10 @@ const MyPillbox = (props) => {
         } else if (today.getHours() >= 11 && today.getHours() < 17){
             dataHistoric.map((index) => {
                 for(const i in index) {
+
                     const date = new Date(index[i].takenDate.seconds * 1000)
                     const dateTimeStamp = index[i].takenDate.seconds 
-                    
+            
                     if ( date.getHours() >= 11 && date.getHours() < 17 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
                         historyOfTheDayPart.push(index[i])
                         setAlreadyValidate(true)
@@ -164,7 +165,7 @@ const MyPillbox = (props) => {
                 <div className="medListContainer2">
                 {historyOfTheDayPart.map(med => (
                     <div className="medList2" key={med.takenDate}>
-                    <p className={med.taken ? "medGreen" : "medRed"}>{med.nom}</p>
+                    <p className={med.taken ? "medInGreen2" : "medInRed2"}>{med.nom}</p>
                     </div>
                 ))}
                 </div>
@@ -181,8 +182,8 @@ const MyPillbox = (props) => {
                 <div className="medList">
                     {medList.map(med => (
                         <div key={med.id} className="med">
-                            <input id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('green'); handleCheckedMeds(event); }} />
-                            <label id={med.nom} htmlFor={med.id} >{med.nom}</label>
+                            <input  id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('medInGreen'); handleCheckedMeds(event); }} />
+                            <label className="medInRed" id={med.nom} htmlFor={med.id} >{med.nom}</label>
                         </div>
                     ))}
                 </div>
