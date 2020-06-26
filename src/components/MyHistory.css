@@ -1,0 +1,82 @@
+.container-tab{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    font-size: .8em;
+}
+
+.table-meds{
+    margin-top: 10vh;
+    width: 90%;
+    background-color: rgba(255, 255, 255, .5);
+    color:#5C6B73;
+}
+
+.table-meds thead{
+    height: 20px;
+    width: 90%;
+}
+
+.table-meds body{
+    width: 90%;
+    height: 50%
+}
+
+
+.table-meds footer .degres1{
+    background-color: #21B534;
+}
+
+.table-meds, th, td{
+    border: .5px solid #5C6B73;
+    border-collapse: collapse;
+}
+
+.table-meds th{
+    height: 40px;
+    width: 90%;
+}
+
+.table-meds-mois{
+    font-size: .8em;
+    font-weight: 800;
+}
+
+.container-notice{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    align-items: flex-end;
+}
+.container-notice .done{
+    background-color: #21B534;
+    width: 33%;
+    padding: 8px 0;
+}
+.container-notice .missed{
+    background-color: #F00314;
+    width: 33%;
+    padding: 8px 0;
+}
+.container-notice .taken{
+    background-color: #FF4D1C;
+    width: 33%;
+    padding: 8px 0;
+}
+
+.red {
+    background-color : #F00314;
+}
+.orange {
+    background-color: #FF4D1C;
+}
+.green{
+    background-color: #21B534;
+}

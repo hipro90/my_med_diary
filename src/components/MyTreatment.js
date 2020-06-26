@@ -39,12 +39,6 @@ const MyTreatment = (props) => {
             
                 )}
             </ul>
-            {/* <form className="formMore">
-                <div className='container-checks'>
-                <FontAwesomeIcon icon={faTimesCircle} className='icon' />
-                <label className='nom-med'>Medecine</label>
-                </div>                              
-            </form> */}
             <FontAwesomeIcon icon={faPlusCircle} className='iconMore' />
         </div>
         <div><Modal callDataBase={props.callDataBase} showModal={openModal} closeModal={closeModal} /></div>
