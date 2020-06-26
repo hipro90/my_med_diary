@@ -155,6 +155,7 @@ const MyPillbox = (props) => {
 
     return alreadyValidate ? (
             <div>
+                <BurgerMenu/>
                 <p className="pillboxP2">"You already took your medicines"</p>
                 {console.log(historyOfTheDayPart)}
                 <div className="medListContainer2">
@@ -174,14 +175,14 @@ const MyPillbox = (props) => {
             <div className="medListContainer">
                 <div className="medList">
                     {medList.map(med => (
-                        <div key={med.id}>
+                        <div key={med.id} className="med">
                             <input id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('green'); handleCheckedMeds(event); }} />
                             <label id={med.nom} htmlFor={med.id} >{med.nom}</label>
                         </div>
                     ))}
                 </div>
             </div>
-            <button onClick={()=> sendData()} ><Link to='/Home'>VALIDATE</Link></button>
+            <button className="buttonPillbox" onClick={()=> sendData()} ><Link to='/Home'>VALIDATE</Link></button>
         </div>
     )
 }

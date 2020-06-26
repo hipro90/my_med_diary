@@ -1,0 +1,61 @@
+.container-tab{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+}
+
+.table-meds{
+    margin-top: 5%;
+    width: 80%;
+    background-color: #C2DFE3;
+    color:#5C6B73;
+}
+
+
+
+.table-meds thead{
+    height: 20px;
+    width: 90%;
+}
+
+.table-meds body{
+    width: 90%;
+    height: 50%
+}
+
+.table-meds footer{
+    height: 30px
+}
+
+.table-meds, th, td{
+    border: none;
+    border-collapse: collapse;
+}
+
+.table-meds th{
+    height: 40px;
+    width: 90%;
+}
+
+.table-meds-mois{
+    font-size: .8em;
+    font-weight: 800;
+}
+
+.table-meds-done{
+    background-color: #21B534;
+}
+
+.table-meds-missed{
+    background-color: #F00314;
+}
+
+.table-meds-taken{
+    background-color: #FF4D1C;
+}
+
+
