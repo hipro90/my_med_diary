@@ -1,15 +1,32 @@
+.banniere {
+    width: 100%;
+    text-align: center;
+    background-color: #30d3e2b9;
+    height: 87px;
+}
+
 .container-more{
     display: flex;
     width: 100%;
     flex-direction: column;
+    margin-top: 30px;
+}
+
+.container-more ul {
+    text-align:center ;
+    font-size: 1.5em;
+    padding: 0 20px;
+
 }
 
 .iconMore{
     font-size: 5em;
     color: #F28737;
-    position: absolute!important;
-    right: 10vw;
-    bottom: 5%;
+    position: fixed;
+    right: 13vw;
+    bottom: 10%;
+    background-color: white;
+    border-radius: 50px;
 }
 .form {
     width: 90%;
@@ -47,3 +64,39 @@
     width: 0;
     top: 5px;
 }
+
+.li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 20px 0;
+    color:#01e8fd;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #5C6B73;
+    line-height: 2;
+    font-size: 1.5em;
+}
+
+.icon-delete {
+    font-size: 1.5em;
+    color: #F28737;
+    margin-top: 12px;
+}
+
+.myTreatment {
+    margin-top: 0;
+    margin-bottom: 40px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #5C6B73;
+    line-height: 2;
+    font-size: 2.5em;
+    margin-right: -23px;
+}
+/* .li button {
+    height: 45px;
+    width: 45px;
+
+} */

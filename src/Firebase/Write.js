@@ -4,7 +4,7 @@ import * as firebase from 'firebase'
 
 const db = firebase.firestore()
 
-const Write = (collection, data, id) => {
+const Write = (collection, data) => {
 
     db.collection(collection).add(data)
     .then(() => {
