@@ -37,7 +37,7 @@ const Modal = (props) => {
     }
     const { nom, quantiteParPrise, present, matin, midi, soir } = data
 
-    const collection = 'medicine'
+    const collection = 'medicament'
 
     return (
         props.showModal && (

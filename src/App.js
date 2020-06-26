@@ -35,7 +35,7 @@ const App = () => {
   },[db])
 
   const callDataBase = () => {
-    db.collection('medicine').get()
+    db.collection('medicament').get()
       .then(snapShot => {
           const result = snapShot.docs.map(doc => doc.data())
           const data = snapShot.docs.map(doc => 
