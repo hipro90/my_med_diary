@@ -26,13 +26,15 @@ const MyTreatment = (props) => {
     
     return (
         <>
-        <BurgerMenu/>
-        <h1>My Treatment</h1>
+        <div className='banniere'>
+            <BurgerMenu/>
+            <h1 className='myTreatment'>My Treatment</h1>
+        </div>
         <div onClick={() =>showModal()} className='container-more'>
             <ul>{data.map((doc,key) => 
                 <div className='li'>
                     <li key={key}>{doc[0].nom}</li>
-                    <button id={doc[1]} onClick={()=>Delete(doc[1])}>Delete</button>
+                    <FontAwesomeIcon icon={faTimesCircle} className='icon-delete' onClick={()=>Delete(doc[1],props.callDataBase)} />
                 </div>
             
                 )}

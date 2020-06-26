@@ -1,7 +1,25 @@
+.checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.inputDate {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputDate label {
+    padding-top: 20px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    font-weight: 800;
+}
+
 .modal-holder {
     width: 95%;
     margin: auto;
-    padding: 0;
+    padding: 0
 }
 .modal-holder .modal {
     position: fixed;
@@ -21,6 +39,7 @@
     padding-bottom: 10%;
     position: absolute;
     top: 235px;
+    height: 576px;
 }
 .modal h4,h6{
     color: rgba(242,135,55);
@@ -30,10 +49,8 @@
     top: .3rem;
     right: .5rem;
     display: inline-block;
-    font-size: 1.2em;
+    font-size: 1.7em;
     color:#F28737;
-    background-color: #fff;
-    border-radius: 80px;
     padding: 0px 2px;
 }
 .modal__close:hover {
@@ -41,10 +58,15 @@
     cursor: pointer;
 }
 .modal__header h3{
-    font-size: 1.3rem;
+    font-size: 2rem;
     margin: 30px 0px 0px 0px;
     text-align: center;
     line-height: 32px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #5C6B73;
+    line-height: 2;
 }
 .modal__description {
     font-size: 1em;
@@ -77,13 +99,20 @@
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    margin-left: 45%;
-    margin-top: 8%;
+    position: absolute;
+    bottom: -109px;
+    left: -31vw;
+    width: 160px;
+    height: 70px;
+    font-size: 1.3em;
+    font-weight: bold;
 }
 
 .modal__description .form .nom-med{
     padding-top: 20px;
     font-weight: 500;
+    padding-bottom: 10px;
+    font-weight: 800;
 }
 
 .modal__description .container-checks{
@@ -100,6 +129,7 @@
 
 .modal__description .form .text-info{
     padding: 10px;
+    width: 74vw;
 }
 
 .modal__description .container-checks .text-casse{
@@ -117,9 +147,3 @@
     background: rgba(40,180,192,0.45);
     z-index: 1;
 }
-
-
-
-
-
-     
