@@ -94,26 +94,42 @@
 }
 .medList2{
   margin : 10px auto;
+  font-size: 1em;
 }
-.medRed{
+.medInRed{
   color : red;
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 1em;
+  /*font-weight: 600;*/
   text-shadow: 1px 1px 2px #5C6B73;
   line-height: 2;
 }
-.medGreen{
+.medInGreen{
   color:green;
-  font-size: 2em;
-  font-weight: 600;
+  font-size: 1em;
+  /* font-weight: 600; */
   text-shadow: 1px 1px 2px #5C6B73;
   line-height: 2;
 }
 
-.green{
+.medInRed2{
+  color : red;
+  font-size: 2em;
+  /*font-weight: 600;*/
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
+}
+.medInGreen2{
+  color:green;
+  font-size: 2em;
+  /* font-weight: 600; */
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
+}
+
+/* .green{
     color : green;
     font-size: 2em;
     font-weight: 600;
     text-shadow: 1px 1px 2px #5C6B73;
     line-height: 2;
-}
+} */
