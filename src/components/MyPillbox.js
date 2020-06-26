@@ -155,7 +155,10 @@ const MyPillbox = (props) => {
 
     return alreadyValidate ? (
             <div>
+                <div className="bannierePill">
                 <BurgerMenu/>
+                <h1 className="pillboxH1">My pillbox</h1>
+                </div>
                 <p className="pillboxP2">"You already took your medicines"</p>
                 {console.log(historyOfTheDayPart)}
                 <div className="medListContainer2">
@@ -169,8 +172,10 @@ const MyPillbox = (props) => {
             )  :(
         <div className="pillbox">
             {console.log(historyOfTheDayPart)}
+            <div className="bannierePill">
             <BurgerMenu/>
-            <h2 className="pillboxH2">My Pillbox</h2>
+            <h1 className="pillboxH1">My Pillbox</h1>
+            </div>
             <p className="pillboxP">{message}</p>
             <div className="medListContainer">
                 <div className="medList">

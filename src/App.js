@@ -55,7 +55,6 @@ const App = () => {
       <Switch>
         <Route exact path = '/' component = {Loader} />
         <Route path = '/Home' component = {Home} />
-        <Route path = '/myDiary' component = {MyDiary} />
         <Route path = '/myHistory'>
           <MyHistory historic={historic} />
         </Route>

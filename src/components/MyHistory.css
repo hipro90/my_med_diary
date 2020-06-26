@@ -38,7 +38,7 @@
 
 .table-meds th{
     height: 40px;
-    width: 90%;
+    
 }
 
 .table-meds-mois{
@@ -70,7 +70,12 @@
     width: 33%;
     padding: 8px 0;
 }
-
+.days{
+    width : 40px;
+}
+.medicine{
+    width : 80px;
+}
 .red {
     background-color : #F00314;
 }
