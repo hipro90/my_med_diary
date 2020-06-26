@@ -3,27 +3,7 @@ import React, { useState, useEffect } from 'react'
 import BurgerMenu from './BurgerMenu'
 import './MyHistory.css'
 
-    const MyHistory = ({historic}) => {
-        const [history, setHistory] = useState([])
-      
-        const getHistory = () => {
-          const table = []
-          const todayTimeStamp = Date.parse(new Date())/1000
-      
-          historic.map((index) => {
-            for (const i in index) {
-              //console.log(index[i])
-              table.push(index[i])
-            }
-          })
-      
-          setHistory(table)
-
-          const NumberPerDays = [0,0,0,0,0,0,0]
-          console.log(table)
-      
-          if(table[0] !== undefined){
-           for (let i=table.length ; i > 0 ; i--){
+    
 
 const MyHistory = ({historic}) => {
 
@@ -43,7 +23,7 @@ const MyHistory = ({historic}) => {
 
     setHistory(table)
 
-    const NumberPerDays = [0,0,0,0,0,0,0]
+    const NumberPerDays = [0,0,0,0,0]
     
     // console.log(NumberPerDays)
 
@@ -76,71 +56,24 @@ const MyHistory = ({historic}) => {
     setNumberPerDays(NumberPerDays)
 }
 }  
-  
+
 
   useEffect(() => {
     getHistory()
   }, [historic])
 
-  return (
-    <div className='container-tab'>
-       {console.log(history)} 
-      <BurgerMenu />
-      <h1>My history</h1>
-      <div>
-           { NumberPerDays.map( day => (
-               <div className={day >= 2 ? 'red' : (day === 1 ? 'orange' : 'green')}>{day}</div>
-           ))}
-      </div>
-      <div>
-        <table className='table-meds'>
-          <thead>
-          <tr><th>Test</th></tr>
-          </thead>
-          {/* <tbody>
-            {history.map(row => (
-              row.takenDate
-            ))
-          </tbody> 
-          <tbody>
-             
-          </tbody> 
-          <tbody>
-              {history.map((row, i)=>
-                <tr key={i}>
-                    {history.map((col, j)=>
-                    <td key={j}>{col}</td>
-                    )}
-                </tr>
-              )}
-          </tbody>*/}
-          <tr>
-              {history.map((med) => (
-                <td>{med.nom}</td>
-              ))}
-            </tr>  
-          <tfoot>footer</tfoot>
-        </table>
-      </div>
-    </div>
-  )
 
-}
-
-export default MyHistory 
-           }
-          }
-        }
-      
-        useEffect(() => {
-          getHistory()
-        }, [historic])
       
         return (
             <>
           <div className='container-tab'>
             <BurgerMenu />
             <h1>My history</h1>
+            <div>
+           {/* { NumberPerDays.map( day => (
+               <div className={day >= 2 ? 'red' : (day === 1 ? 'orange' : 'green')}>{day}</div>
+           ))} */}
+             </div>
               <table className='table-meds'>
               <tbody>
                 <tr>
@@ -154,11 +87,11 @@ export default MyHistory
                 {history.map((med, i) => (
                 <tr key={i}>
                 <td>{med.nom}</td>
+                { NumberPerDays.map( day => (
+                <td className={day >= 2 ? 'red' : (day === 1 ? 'orange' : 'green')}></td>
+                    ))} 
                 </tr>
               ))}
-              <tr>
-              <td>Sunday</td>
-                </tr>                
                 </tbody> 
               </table>
             

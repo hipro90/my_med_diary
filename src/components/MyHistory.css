@@ -71,4 +71,12 @@
     padding: 8px 0;
 }
 
-
+.red {
+    background-color : #F00314;
+}
+.orange {
+    background-color: #FF4D1C;
+}
+.green{
+    background-color: #21B534;
+}
