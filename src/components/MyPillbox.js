@@ -23,7 +23,9 @@ const MyPillbox = (props) => {
     const [allMedsTaken, setAllMedsTaken] = useState({})
     const [dataMedicine, setDataMedicine] = useState([])
     const [dataHistoric, setDataHistoric] = useState([])
+    const [historyOfTheDayPart, setHistoryOfTheDayPart] = useState([])
     const [checkedSomething, setCheckedSomething] = useState(false)
+    const [alreadyValidate, setAlreadyValidate] = useState(false)
     const collection = 'historic'
 
     useEffect(() => {
@@ -42,21 +44,12 @@ const MyPillbox = (props) => {
         getHistory()
     }, [props.historic] )
 
-    // if (dataHistoric[0] !== undefined){
-    //     dataHistoric.map((index) => {
-    //         for(const i in index) {
-    //             console.log(new Date(index[i].takenDate.seconds * 1000))
-    //             console.log(index[i])
-    //         }
-    //     }
-    //     )
-    //     //console.log(dataHistoric[0][0])
-    // }
 
     const getHistory =() =>{
         const dataHistoric = props.historic
         const today = new Date()
         const todayTimeStamp = Date.parse(today)/1000
+        let historyOfTheDayPart = []
 
         if (today.getHours() < 11){
             dataHistoric.map((index) => {
@@ -65,10 +58,11 @@ const MyPillbox = (props) => {
                     const dateTimeStamp = index[i].takenDate.seconds 
                     
                     if ( date.getHours() < 11 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
-                        console.log('1 medicament pris ce matin')
-                        console.log(index[i].nom)
+                        historyOfTheDayPart.push(index[i])
+                        setAlreadyValidate(true)
                     }
                 }
+                setHistoryOfTheDayPart(historyOfTheDayPart)
             })
         } else if (today.getHours() >= 11 && today.getHours() < 17){
             dataHistoric.map((index) => {
@@ -77,48 +71,40 @@ const MyPillbox = (props) => {
                     const dateTimeStamp = index[i].takenDate.seconds 
                     
                     if ( date.getHours() >= 11 && date.getHours() < 17 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
-                        console.log('1 medicament pris ce midi')
-                        console.log(index[i].nom)
+                        historyOfTheDayPart.push(index[i])
+                        setAlreadyValidate(true)
                     }
                 }
+                setHistoryOfTheDayPart(historyOfTheDayPart)
             })
         } else {
             dataHistoric.map((index) => {
+                
                 for(const i in index) {
                     const date = new Date(index[i].takenDate.seconds * 1000)
                     const dateTimeStamp = index[i].takenDate.seconds 
+                    
                     //const todayTimeStamp = Date.parse(today)/1000
                     //console.log(date)
                     //console.log(date.getHours())
                     //console.log(dateTimeStamp)
                     //console.log(todayTimeStamp)
                     if (date.getHours() > 17 && date.getHours() < 23 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
-                        console.log('1 medicament pris ce soir')
-                        console.log(index[i].nom)
+                        historyOfTheDayPart.push(index[i])
+                        setAlreadyValidate(true)
+                        //console.log(index[i])
                     }
+                    
                     //console.log('test')
                     //&& (todayTimeStamp-dateTimeStamp) < 86400000
                     //console.log( (Date.parse('02 Jan 1970 00:00:00 GMT'))- (Date.parse('01 Jan 1970 00:00:00 GMT')) )
                     //console.log(new Date(86400000))
                 }
+                setHistoryOfTheDayPart(historyOfTheDayPart)
             })
         }
         }
      
-
-    //récupérer les datas de l'historique 
-    // regarder dans quelle tranche horaire on est matin, midi ou soir
-    // regarder si pour cette tranche horaire des datas existent
-    // si des datas existent : afficher medicaments déjà pris
-      // afficher quels médicaments ont été pris
-      // Vérouiller le bouton valider
-    // si les datas n'existent pas : afficher les medicaments à prendre
-        // laisser le bouton validé en marche
-
-    
-    // const dejaPris = dataHistoric.map(index => {
-    //     index.map(i => console.log(i))
-    // })
 
     const getCurrentMedList = () => {
         const today = new Date()
@@ -134,13 +120,13 @@ const MyPillbox = (props) => {
             med.present === true && med.debut <= today && med.fin >= today))
 
         if (today.getHours() < 11) {
-            setMessage("Your medicines to take with breakfast :")
+            setMessage("Medicines to take during breakfast :")
             setMedList(todayMedList.filter(med => med.matin === true))
         } else if (today.getHours() >= 11 && today.getHours() < 17) {
-            setMessage("Your medicines to take with lunch :")
+            setMessage("Medicines to take during lunch :")
             setMedList(todayMedList.filter(med => med.midi === true))
         } else {
-            setMessage("Your medicines to take with diner :")
+            setMessage("Medicines to take during diner :")
             setMedList(todayMedList.filter(med => med.soir === true))
         }
     }
@@ -167,8 +153,21 @@ const MyPillbox = (props) => {
         }
     }
 
-    return (
+    return alreadyValidate ? (
+            <div>
+                <p className="pillboxP2">"You already took your medicines"</p>
+                {console.log(historyOfTheDayPart)}
+                <div className="medListContainer2">
+                {historyOfTheDayPart.map(med => (
+                    <div className="medList2" key={med.takenDate}>
+                    <p className={med.taken ? "medGreen" : "medRed"}>{med.nom}</p>
+                    </div>
+                ))}
+                </div>
+            </div>
+            )  :(
         <div className="pillbox">
+            {console.log(historyOfTheDayPart)}
             <BurgerMenu/>
             <h2 className="pillboxH2">My Pillbox</h2>
             <p className="pillboxP">{message}</p>

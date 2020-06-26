@@ -9,6 +9,11 @@
     text-align: center;
     margin-bottom: 20px;
 }
+.pillboxP2{
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 .medListContainer{
     margin: auto;
     
@@ -16,8 +21,25 @@
     justify-content: center;
 }
 
+.medListContainer2{
+  margin: auto;
+  
+  display : flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .medList {
   color: red;
+}
+.medList2{
+  margin : 10px auto;
+}
+.medRed{
+  color : red;
+}
+.medGreen{
+  color:green;
 }
 
 .green{
