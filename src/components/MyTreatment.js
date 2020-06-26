@@ -31,14 +31,17 @@ const MyTreatment = (props) => {
             <h1 className='myTreatment'>My Treatment</h1>
         </div>
         <div onClick={() =>showModal()} className='container-more'>
-        <form className="formMore">
-            <div className='container-checks'>
-            <FontAwesomeIcon icon={faTimesCircle} className='icon' />
-            <label className='nom-med'>Medicine</label>
-            </div>                              
-        </form>
-        <FontAwesomeIcon icon={faPlusCircle} className='iconMore' /></div>
-        <div><Modal showModal={openModal} closeModal={closeModal} /></div>
+            <ul>{data.map((doc,key) => 
+                <div className='li'>
+                    <li key={key}>{doc[0].nom}</li>
+                    <FontAwesomeIcon icon={faTimesCircle} className='icon-delete' onClick={()=>Delete(doc[1],props.callDataBase)} />
+                </div>
+
+                )}
+            </ul>
+            <FontAwesomeIcon icon={faPlusCircle} className='iconMore' />
+        </div>
+        <div><Modal callDataBase={props.callDataBase} showModal={openModal} closeModal={closeModal} /></div>
         </>
     )
 }
