@@ -42,10 +42,13 @@ const MyPillbox = (props) => {
 
     useEffect(()=>{
         getHistory()
+        console.log('1')
+        console.log('1 data',props.historic)
     }, [props.historic] )
 
-
-    const getHistory =() =>{
+    const getHistory = () =>{
+        console.log('2')
+        console.log('2 data',props.historic)
         const dataHistoric = props.historic
         const today = new Date()
         const todayTimeStamp = Date.parse(today)/1000
@@ -65,7 +68,8 @@ const MyPillbox = (props) => {
                 setHistoryOfTheDayPart(historyOfTheDayPart)
             })
         } else if (today.getHours() >= 11 && today.getHours() < 17){
-            dataHistoric.map((index) => {
+            dataHistoric.map((item) => {
+                const index = Object.values(item)
                 for(const i in index) {
                     const date = new Date(index[i].takenDate.seconds * 1000)
                     const dateTimeStamp = index[i].takenDate.seconds 
@@ -104,7 +108,6 @@ const MyPillbox = (props) => {
             })
         }
         }
-     
 
     const getCurrentMedList = () => {
         const today = new Date()
@@ -154,10 +157,12 @@ const MyPillbox = (props) => {
     }
 
     return alreadyValidate ? (
-            <div>
+            <div className="pillbox">
+                <div className="bannierePill">
                 <BurgerMenu/>
-                <p className="pillboxP2">"You already took your medicines"</p>
-                {console.log(historyOfTheDayPart)}
+                <h1 className="pillboxH1">My pillbox</h1>
+                </div>
+                <p className="pillboxP2">You already took your medicines :</p>
                 <div className="medListContainer2">
                 {historyOfTheDayPart.map(med => (
                     <div className="medList2" key={med.takenDate}>
@@ -168,9 +173,10 @@ const MyPillbox = (props) => {
             </div>
             )  :(
         <div className="pillbox">
-            {console.log(historyOfTheDayPart)}
+            <div className="bannierePill">
             <BurgerMenu/>
-            <h2 className="pillboxH2">My Pillbox</h2>
+            <h1 className="pillboxH1">My Pillbox</h1>
+            </div>
             <p className="pillboxP">{message}</p>
             <div className="medListContainer">
                 <div className="medList">

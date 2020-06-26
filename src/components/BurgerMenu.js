@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { stack as Menu } from 'react-burger-menu'
 
 import './BurgerMenu.css'
- 
+
 class BurgerMenu extends React.Component {
   render () {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling

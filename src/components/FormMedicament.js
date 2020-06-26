@@ -27,6 +27,7 @@ const Modal = (props) => {
     }
 
     const handleChangeInput = e => {
+        console.log(e.target.value)
         setData({ ...data, [e.target.id]: e.target.value })
     }
 
@@ -35,9 +36,9 @@ const Modal = (props) => {
         Write(collection, data)
         setData(item)
     }
-    const { nom, quantiteParPrise, present, matin, midi, soir } = data
+    const { nom, quantiteParPrise, present, matin, midi, soir, debut, fin } = data
 
-    const collection = 'medicine'
+    const collection = 'medicament'
 
     return (
         props.showModal && (
@@ -60,10 +61,10 @@ const Modal = (props) => {
                                 <input className='text-info' id='quantiteParPrise' value={quantiteParPrise} onChange={handleChangeInput} autoComplete='off' />
                                 <div className='inputDate'>
                                     <label htmlFor='debut'>Starting</label>
-                                    <input type='date' id='debut' />
+                                    <input type='date' id='debut'  onChange={handleChangeInput}/>
 
                                     <label htmlFor='fin'>Until</label>
-                                    <input type='date' id='fin' />
+                                    <input type='date' id='fin'  onChange={handleChangeInput}/>
                                 </div>
                                 <div className='checkbox'>
                                     <div className='container-checks'>

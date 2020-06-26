@@ -9,6 +9,7 @@ const MyHistory = ({historic}) => {
 
   const [history, setHistory] = useState([])
   const [NumberPerDays, setNumberPerDays] = useState([])
+  const [lastDays, selLastDays] = useState([])
 
   const getHistory = () => {
     const table = []
@@ -23,13 +24,17 @@ const MyHistory = ({historic}) => {
 
     setHistory(table)
 
+
     const NumberPerDays = [0,0,0,0,0]
+
     
     // console.log(NumberPerDays)
 
     //console.log(table)
     
     //table[0] && console.log('table i', table[0].takenDate.seconds)
+
+    //new Date(index[i].takenDate.seconds * 1000)
 
     if(table[0] !== undefined){
         table.map( index => {
@@ -57,12 +62,33 @@ const MyHistory = ({historic}) => {
 }
 }  
 
+const getDates = () =>{
+
+    const lastDays = [0,0,0,0,0]
+    const todayTimeStamp = Date.parse(new Date())/1000
+    //console.log(todayTimeStamp)
+    lastDays[0] = todayTimeStamp
+    for (let i = 1 ; i < lastDays.length; i++){
+        lastDays[i] = lastDays[i-1]- 86400
+        console.log(lastDays[i])
+    }
+    for (let i = 0 ; i < lastDays.length; i++){
+        const date = new Date(lastDays[i] * 1000)
+        lastDays[i] = `${date.getDate()}/${date.getMonth()+1}`
+        
+    }
+    selLastDays(lastDays)
+
+}
+
 
   useEffect(() => {
     getHistory()
   }, [historic])
 
-
+  useEffect(() =>{
+      getDates()
+  }, [])
       
         return (
             <>
@@ -77,12 +103,17 @@ const MyHistory = ({historic}) => {
               <table className='table-meds'>
               <tbody>
                 <tr>
-                    <th scope="col">Medecin</th>
+                    <th className="medicine" scope="col">Medicines</th>
+                    {/* <th scope="col">Medecin</th>
                     <th scope="col">Sunday</th>
                     <th scope="col">Thusday</th>
                     <th scope="col">Wendsday</th>
                     <th scope="col">Thursday</th>
-                    <th scope="col">Friday</th>
+                    <th scope="col">Friday</th> */}
+                    {lastDays.map( day => (
+                        <th className="days">{day}</th>
+                    ))}
+                    
                 </tr>            
                 {history.map((med, i) => (
                 <tr key={i}>

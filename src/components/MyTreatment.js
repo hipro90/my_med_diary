@@ -22,6 +22,7 @@ const MyTreatment = (props) => {
     
     useEffect(() => {
         setData(props.dataTreatment)
+        console.log({...props.medicine[2]}.id)
     },[props.dataTreatment])
     
     return (
@@ -36,7 +37,6 @@ const MyTreatment = (props) => {
                     <li key={key}>{doc[0].nom}</li>
                     <FontAwesomeIcon icon={faTimesCircle} className='icon-delete' onClick={()=>Delete(doc[1],props.callDataBase)} />
                 </div>
-            
                 )}
             </ul>
             <FontAwesomeIcon icon={faPlusCircle} className='iconMore' />
