@@ -2,6 +2,14 @@
     display: flex;
     width: 100%;
     flex-direction: column;
+    margin-top: 30px;
+}
+
+.container-more ul {
+    text-align:center ;
+    font-size: 1.5em;
+    padding: 0 20px;
+
 }
 
 .iconMore{
@@ -47,3 +55,16 @@
     width: 0;
     top: 5px;
 }
+
+.li {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    margin: 20px 0;
+}
+
+/* .li button {
+    height: 45px;
+    width: 45px;
+
+} */

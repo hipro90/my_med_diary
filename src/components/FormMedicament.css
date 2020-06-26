@@ -19,6 +19,8 @@
     background: #28B4C0;
     border-radius: 0.4375rem;
     padding-bottom: 10%;
+    position: absolute;
+    top: 235px;
 }
 .modal h4,h6{
     color: rgba(242,135,55);

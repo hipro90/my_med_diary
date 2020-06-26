@@ -4,8 +4,9 @@ import * as firebase from 'firebase'
 
 const db = firebase.firestore()
 
-const Delete = () => {
-    db.collection('historic').doc("Doliprane").delete()
+const Delete = (props) => {
+    console.log(props)
+    db.collection('medicine').doc(props).delete()
     .then(snapShot => {
         console.log(snapShot.docs.map(doc => doc.data()))
     })
