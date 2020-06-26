@@ -93,13 +93,10 @@ const getDates = () =>{
         return (
             <>
           <div className='container-tab'>
+          <div className='banniere'>
             <BurgerMenu />
-            <h1>My history</h1>
-            <div>
-           {/* { NumberPerDays.map( day => (
-               <div className={day >= 2 ? 'red' : (day === 1 ? 'orange' : 'green')}>{day}</div>
-           ))} */}
-             </div>
+            <h1 >My history</h1>
+            </div>
               <table className='table-meds'>
               <tbody>
                 <tr>
