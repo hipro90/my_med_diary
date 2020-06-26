@@ -18,7 +18,6 @@ const Home = () => {
             <div className="ButtonHomeContainer">
                 <button className="homeButton"><Link to='/myPillbox' className="homeLink">My Pillbox</Link></button>
                 <button className="homeButton"><Link to='/myTreatment' className="homeLink">My treatment</Link></button>
-                <button className="homeButton"><Link to='/myDiary' className="homeLink">My diary</Link></button>
             </div>
         </div>
     )
