@@ -17,26 +17,38 @@ const App = () => {
   const db = firebase.firestore()
   const [historic, setHistoric] = useState([])
   const [medicine, setMedicine] = useState([])
-
+  const [dataTreatment, setDataTreatment] = useState([])
+  
+  
   useEffect(() => {
       db.collection('historic').get()
       .then(snapShot => {
-          const result = snapShot.docs.map(doc => doc.data())
+        const result = snapShot.docs.map(doc => doc.data())
+        // snapShot.docs.map(doc => console.log(doc.id ))
           setHistoric(result)
       })
       .catch(error => {
           console.log("Error writing document:", error)
       })
 
-      db.collection('medicine').get()
+      callDataBase()
+  },[db])
+
+  const callDataBase = () => {
+    db.collection('medicine').get()
       .then(snapShot => {
           const result = snapShot.docs.map(doc => doc.data())
-          setMedicine(result)
-      })
+          const data = snapShot.docs.map(doc => 
+            [doc.data(), doc.id])
+            setMedicine(result)
+            setDataTreatment(data)
+      }) 
       .catch(error => {
           console.log("Error writing document:", error)
       })
-  },[db])
+  }
+
+  
 
   return (
     <div className="App">
@@ -50,7 +62,7 @@ const App = () => {
           <MyPillbox medicine={medicine} historic={historic}/>
         </Route>
         <Route path = '/myTreatment'>
-          <MyTreatment medicine={medicine} />
+          <MyTreatment callDataBase={callDataBase} dataTreatment={dataTreatment}/>
         </Route>
       </Switch>
     </div>
