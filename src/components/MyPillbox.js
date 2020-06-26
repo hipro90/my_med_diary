@@ -154,12 +154,12 @@ const MyPillbox = (props) => {
     }
 
     return alreadyValidate ? (
-            <div>
+            <div className="pillbox">
                 <div className="bannierePill">
                 <BurgerMenu/>
                 <h1 className="pillboxH1">My pillbox</h1>
                 </div>
-                <p className="pillboxP2">"You already took your medicines"</p>
+                <p className="pillboxP2">You already took your medicines :</p>
                 {console.log(historyOfTheDayPart)}
                 <div className="medListContainer2">
                 {historyOfTheDayPart.map(med => (
