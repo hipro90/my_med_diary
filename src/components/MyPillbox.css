@@ -7,6 +7,7 @@
 .pillboxH1{
     /* text-align: center;
     margin : 20px auto; */
+    
     margin-top: 0;
     margin-bottom: 40px;
     color: #fff;
@@ -29,11 +30,26 @@
 .pillboxP{
     text-align: center;
     margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-size: 2em;
+    color:#01e8fd;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #5C6B73;
+    line-height: 2;
 }
 .pillboxP2{
   text-align: center;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-size: 2em;
+  color:#01e8fd;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
 }
 .medListContainer{
     margin: auto;
@@ -50,25 +66,77 @@
   justify-content: center;
 }
 .buttonPillbox{
-  width: 100px;
+ 
   margin : 20px auto;
+  background-color:  #F28737;
+  font-size: 1.5em;
+  font-weight: 600;
+  text-align: left;
+  border-radius: 8px;
+  border: none;
+  padding: 10px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  width: 160px;
+  height: 70px;
+  font-weight: bold;
 }
 .medList {
   color: red;
+  font-size: 2em;
+  font-weight: 600;
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
 }
 .med{
-  margin : 30px;
+  margin : 10px;
 }
 .medList2{
-  margin : 20px auto;
+  margin : 10px auto;
+  font-size: 1em;
 }
-.medRed{
+.medInRed{
   color : red;
+  font-size: 1em;
+  padding-left: 15px;
+  /*font-weight: 600;*/
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
 }
-.medGreen{
+.medInGreen{
   color:green;
+  font-size: 1em;
+  padding-left: 15px;
+  /* font-weight: 600; */
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
 }
 
-.green{
-    color : green;
+.medInRed2{
+  color : red;
+  font-size: 2em;
+  /*font-weight: 600;*/
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
 }
+.medInGreen2{
+  color:green;
+  font-size: 2em;
+  /* font-weight: 600; */
+  text-shadow: 1px 1px 2px #5C6B73;
+  line-height: 2;
+}
+
+.checkboxMed{
+  height : 30px;
+  width: 30px;
+}
+
+/* .green{
+    color : green;
+    font-size: 2em;
+    font-weight: 600;
+    text-shadow: 1px 1px 2px #5C6B73;
+    line-height: 2;
+} */

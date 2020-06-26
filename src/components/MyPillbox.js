@@ -44,8 +44,7 @@ const MyPillbox = (props) => {
         getHistory()
     }, [props.historic] )
 
-
-    const getHistory =() =>{
+    const getHistory = () =>{
         const dataHistoric = props.historic
         const today = new Date()
         const todayTimeStamp = Date.parse(today)/1000
@@ -65,11 +64,13 @@ const MyPillbox = (props) => {
                 setHistoryOfTheDayPart(historyOfTheDayPart)
             })
         } else if (today.getHours() >= 11 && today.getHours() < 17){
-            dataHistoric.map((index) => {
+            dataHistoric.map((item) => {
+                const index = Object.values(item)
                 for(const i in index) {
+
                     const date = new Date(index[i].takenDate.seconds * 1000)
                     const dateTimeStamp = index[i].takenDate.seconds 
-                    
+            
                     if ( date.getHours() >= 11 && date.getHours() < 17 && ((todayTimeStamp-dateTimeStamp) < 86400000)){
                         historyOfTheDayPart.push(index[i])
                         setAlreadyValidate(true)
@@ -104,7 +105,6 @@ const MyPillbox = (props) => {
             })
         }
         }
-     
 
     const getCurrentMedList = () => {
         const today = new Date()
@@ -114,6 +114,7 @@ const MyPillbox = (props) => {
             todayMedList[i].debut = new Date(todayMedList[i].debut)
             todayMedList[i].fin = new Date(todayMedList[i].fin)
             todayMedList[i].taken = false
+            todayMedList[i].takenDate = new Date()
         }
 
         todayMedList = todayMedList.filter(med => (
@@ -154,24 +155,22 @@ const MyPillbox = (props) => {
     }
 
     return alreadyValidate ? (
-            <div>
+            <div className="pillbox">
                 <div className="bannierePill">
                 <BurgerMenu/>
                 <h1 className="pillboxH1">My pillbox</h1>
                 </div>
-                <p className="pillboxP2">"You already took your medicines"</p>
-                {console.log(historyOfTheDayPart)}
+                <p className="pillboxP2">You already took your medicines :</p>
                 <div className="medListContainer2">
                 {historyOfTheDayPart.map(med => (
                     <div className="medList2" key={med.takenDate}>
-                    <p className={med.taken ? "medGreen" : "medRed"}>{med.nom}</p>
+                    <p className={med.taken ? "medInGreen2" : "medInRed2"}>{med.quantiteParPrise} x {med.nom}</p>
                     </div>
                 ))}
                 </div>
             </div>
             )  :(
         <div className="pillbox">
-            {console.log(historyOfTheDayPart)}
             <div className="bannierePill">
             <BurgerMenu/>
             <h1 className="pillboxH1">My Pillbox</h1>
@@ -181,8 +180,8 @@ const MyPillbox = (props) => {
                 <div className="medList">
                     {medList.map(med => (
                         <div key={med.id} className="med">
-                            <input id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('green'); handleCheckedMeds(event); }} />
-                            <label id={med.nom} htmlFor={med.id} >{med.nom}</label>
+                            <input className="checkboxMed" id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('medInGreen'); handleCheckedMeds(event); }} />
+                            <label className="medInRed" id={med.nom} htmlFor={med.id} >{med.quantiteParPrise} x {med.nom}</label>
                         </div>
                     ))}
                 </div>

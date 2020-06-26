@@ -6,7 +6,7 @@ const db = firebase.firestore()
 
 const Delete = (id,callDataBase) => {
     callDataBase()
-    db.collection('medicine').doc(id).delete()
+    db.collection('medicament').doc(id).delete()
     .then(snapShot => {
         console.log(snapShot.docs.map(doc => doc.data()))
     })
