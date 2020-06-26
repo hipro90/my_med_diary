@@ -42,13 +42,9 @@ const MyPillbox = (props) => {
 
     useEffect(()=>{
         getHistory()
-        console.log('1')
-        console.log('1 data',props.historic)
     }, [props.historic] )
 
     const getHistory = () =>{
-        console.log('2')
-        console.log('2 data',props.historic)
         const dataHistoric = props.historic
         const today = new Date()
         const todayTimeStamp = Date.parse(today)/1000

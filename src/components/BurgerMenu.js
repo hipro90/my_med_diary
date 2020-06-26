@@ -12,7 +12,6 @@ class BurgerMenu extends React.Component {
       <Menu disableAutoFocus>
         <Link id="home" className="menu-item" to="/Home">Home</Link>
         <Link id="Pillbox" className="menu-item" to="/myPillbox">My Pillbox</Link>
-        <Link id="Diary" className="menu-item" to="/myDiary">My Diary</Link>
         <Link id="Treatment" className="menu-item" to="/myTreatment">My Treatment</Link>
         <Link id="history" className="menu-item" to="/myHistory">History</Link>
       </Menu>

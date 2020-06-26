@@ -19,7 +19,7 @@ const MyTreatment = (props) => {
     const closeModal = ()=> {
         setOpenModal(false)
     }
-    
+
     useEffect(() => {
         setData(props.dataTreatment)
         console.log({...props.medicine[2]}.id)

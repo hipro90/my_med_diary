@@ -17,30 +17,17 @@ const MyHistory = ({historic}) => {
 
     historic.map((index) => {
       for (const i in index) {
-        //console.log(index[i])
         table.push(index[i])
       }
     })
 
     setHistory(table)
 
-
     const NumberPerDays = [0,0,0,0,0]
-
-    
-    // console.log(NumberPerDays)
-
-    //console.log(table)
-    
-    //table[0] && console.log('table i', table[0].takenDate.seconds)
-
-    //new Date(index[i].takenDate.seconds * 1000)
 
     if(table[0] !== undefined){
         table.map( index => {
-            console.log(index)
             let dayNumber = todayTimeStamp -(index.takenDate.seconds)
-            console.log(dayNumber)
             if (index.taken === false){
                 if(dayNumber < 86400000){
                     NumberPerDays[0]=NumberPerDays[0]+1
@@ -57,7 +44,6 @@ const MyHistory = ({historic}) => {
                 }
         }
     })
-    console.log(NumberPerDays)
     setNumberPerDays(NumberPerDays)
 }
 }  
@@ -66,11 +52,9 @@ const getDates = () =>{
 
     const lastDays = [0,0,0,0,0]
     const todayTimeStamp = Date.parse(new Date())/1000
-    //console.log(todayTimeStamp)
     lastDays[0] = todayTimeStamp
     for (let i = 1 ; i < lastDays.length; i++){
         lastDays[i] = lastDays[i-1]- 86400
-        console.log(lastDays[i])
     }
     for (let i = 0 ; i < lastDays.length; i++){
         const date = new Date(lastDays[i] * 1000)
