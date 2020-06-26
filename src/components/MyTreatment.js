@@ -24,7 +24,7 @@ const MyTreatment = () => {
         <form className="formMore">
             <div className='container-checks'>
             <FontAwesomeIcon icon={faTimesCircle} className='icon' />
-            <label className='nom-med'>Medecine</label>
+            <label className='nom-med'>Medicine</label>
             </div>                              
         </form>
         <FontAwesomeIcon icon={faPlusCircle} className='iconMore' /></div>

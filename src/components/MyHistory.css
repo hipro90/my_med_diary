@@ -6,16 +6,15 @@
     align-items: center;
     text-align: center;
     padding: 5px;
+    font-size: .8em;
 }
 
 .table-meds{
-    margin-top: 5%;
-    width: 80%;
-    background-color: #C2DFE3;
+    margin-top: 10vh;
+    width: 90%;
+    background-color: rgba(255, 255, 255, .5);
     color:#5C6B73;
 }
-
-
 
 .table-meds thead{
     height: 20px;
@@ -27,12 +26,13 @@
     height: 50%
 }
 
-.table-meds footer{
-    height: 30px
+
+.table-meds footer .degres1{
+    background-color: #21B534;
 }
 
 .table-meds, th, td{
-    border: none;
+    border: .5px solid #5C6B73;
     border-collapse: collapse;
 }
 
@@ -46,16 +46,29 @@
     font-weight: 800;
 }
 
-.table-meds-done{
+.container-notice{
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    align-items: flex-end;
+}
+.container-notice .done{
     background-color: #21B534;
+    width: 33%;
+    padding: 8px 0;
 }
-
-.table-meds-missed{
+.container-notice .missed{
     background-color: #F00314;
+    width: 33%;
+    padding: 8px 0;
 }
-
-.table-meds-taken{
+.container-notice .taken{
     background-color: #FF4D1C;
+    width: 33%;
+    padding: 8px 0;
 }
 
 
