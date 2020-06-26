@@ -82,9 +82,11 @@ const Modal = (props) => {
                                     <div className='container-checks'>
                                         <input className='text-casse' type='checkbox' id='soir' checked={soir} onChange={handleChange} />
                                         <label className='nom-med'>Afternoon</label>
-                                        <button className="button" value="send" onClick={() => props.callDataBase()} type="submit">Registrer</button>
+                                    
                                     </div>
+                                        <button className="button" value="send" onClick={() => props.callDataBase()} type="submit">Registrer</button>
                                 </div>
+                                
                             </form>
                         </div>
                     </div>

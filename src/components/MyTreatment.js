@@ -31,7 +31,7 @@ const MyTreatment = (props) => {
             <div className='banniere'>
                 <h1 className='myTreatment'>My Treatment</h1>
             </div>
-            <div onClick={() =>showModal()}>
+            <div >
                 <ul>{data.map((doc,key) => 
                     <div className='li'>
                         <li key={key}>{doc[0].nom}</li>
@@ -40,7 +40,7 @@ const MyTreatment = (props) => {
                 
                     )}
                 </ul>
-                <FontAwesomeIcon icon={faPlusCircle} className='iconMore' />
+                <FontAwesomeIcon icon={faPlusCircle} className='iconMore' onClick={() =>showModal()} />
             </div>
             <div><Modal callDataBase={props.callDataBase} showModal={openModal} closeModal={closeModal} /></div>
         </div>

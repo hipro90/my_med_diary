@@ -114,6 +114,7 @@ const MyPillbox = (props) => {
             todayMedList[i].debut = new Date(todayMedList[i].debut)
             todayMedList[i].fin = new Date(todayMedList[i].fin)
             todayMedList[i].taken = false
+            todayMedList[i].takenDate = new Date()
         }
 
         todayMedList = todayMedList.filter(med => (
@@ -163,7 +164,7 @@ const MyPillbox = (props) => {
                 <div className="medListContainer2">
                 {historyOfTheDayPart.map(med => (
                     <div className="medList2" key={med.takenDate}>
-                    <p className={med.taken ? "medInGreen2" : "medInRed2"}>{med.nom}</p>
+                    <p className={med.taken ? "medInGreen2" : "medInRed2"}>{med.quantiteParPrise} x {med.nom}</p>
                     </div>
                 ))}
                 </div>
@@ -179,8 +180,8 @@ const MyPillbox = (props) => {
                 <div className="medList">
                     {medList.map(med => (
                         <div key={med.id} className="med">
-                            <input  id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('medInGreen'); handleCheckedMeds(event); }} />
-                            <label className="medInRed" id={med.nom} htmlFor={med.id} >{med.nom}</label>
+                            <input className="checkboxMed" id={med.id} type='checkbox' onClick={(event) => { document.getElementById(`${med.nom}`).classList.toggle('medInGreen'); handleCheckedMeds(event); }} />
+                            <label className="medInRed" id={med.nom} htmlFor={med.id} >{med.quantiteParPrise} x {med.nom}</label>
                         </div>
                     ))}
                 </div>

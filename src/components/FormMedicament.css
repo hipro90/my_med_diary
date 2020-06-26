@@ -32,7 +32,7 @@
     color:#fff;
     text-align: center;
     letter-spacing: 0.0625rem;
-    margin-top: -18vh;
+    margin-top: -20vh;
     font-weight: 300;
     background: #28B4C0;
     border-radius: 0.4375rem;
@@ -86,12 +86,11 @@
     flex-direction: column;
     justify-content: left;
     margin-left: 5%;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     align-items: flex-start;
 }
 
-.modal__description .form button{
-    text-align: left;
+.modal__description .form .button{
     background-color: #F28737;
     border-radius: 8px;
     border: none;
@@ -99,13 +98,12 @@
     color: #fff;
     text-align: center;
     text-transform: uppercase;
-    position: absolute;
-    bottom: -110px;
-    left: -31vw;
     width: 160px;
     height: 70px;
     font-size: 1.3em;
     font-weight: bold;
+    margin-top: 8vh;
+    margin-right: 19%;
 }
 
 .modal__description .form .nom-med{

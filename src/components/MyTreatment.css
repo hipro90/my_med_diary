@@ -26,8 +26,7 @@
 .container-more ul {
     text-align:center ;
     font-size: 1.5em;
-    padding: 0 20px;
-
+    padding: 0px 20px;
 }
 
 .iconMore{
@@ -35,7 +34,7 @@
     color: #F28737;
     position: fixed;
     right: 13vw;
-    bottom: 10%;
+    bottom: 5%;
     background-color: white;
     border-radius: 50px;
 }
@@ -80,13 +79,14 @@
     display: flex;
     justify-content: space-between;
     list-style-type: none;
-    margin: 20px 0;
+    margin: 15px 0;
     color:#01e8fd;
     text-decoration: none;
     font-weight: 600;
-    text-shadow: 1px 1px 2px #5C6B73;
-    line-height: 2;
+    text-shadow: 1px 1px 1px #5C6B73;
+    line-height: 1.5;
     font-size: 1.5em;
+    align-items: flex-end;
 }
 
 .icon-delete {

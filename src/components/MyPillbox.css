@@ -99,6 +99,7 @@
 .medInRed{
   color : red;
   font-size: 1em;
+  padding-left: 15px;
   /*font-weight: 600;*/
   text-shadow: 1px 1px 2px #5C6B73;
   line-height: 2;
@@ -106,6 +107,7 @@
 .medInGreen{
   color:green;
   font-size: 1em;
+  padding-left: 15px;
   /* font-weight: 600; */
   text-shadow: 1px 1px 2px #5C6B73;
   line-height: 2;
@@ -124,6 +126,11 @@
   /* font-weight: 600; */
   text-shadow: 1px 1px 2px #5C6B73;
   line-height: 2;
+}
+
+.checkboxMed{
+  height : 30px;
+  width: 30px;
 }
 
 /* .green{
